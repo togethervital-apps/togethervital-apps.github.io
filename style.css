@@ -1,0 +1,68 @@
+/* TogetherVital Apps – gemeinsame Gestaltung aller Seiten.
+   Keine externen Schriften, keine Cookies, kein Tracking. */
+:root {
+  --bg: #F4F6F9;
+  --flaeche: #FFFFFF;
+  --text: #172026;
+  --blass: #5B6770;
+  --linie: #DDE2E8;
+  --akzent: #1D4E89;
+  --akzent-hell: #E3ECF7;
+  --gruen: #1B6B3A;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121417;
+    --flaeche: #1C1F23;
+    --text: #E6E9EC;
+    --blass: #9AA3AB;
+    --linie: #31363C;
+    --akzent: #6EA4E6;
+    --akzent-hell: #1C2C40;
+    --gruen: #6CC28A;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--akzent); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* Kopf und Fuß */
+.kopf { background: var(--flaeche); border-bottom: 1px solid var(--linie); }
+.kopf .wrap { display: flex; align-items: center; gap: 12px; min-height: 64px; flex-wrap: wrap; }
+.marke { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 19px; margin-right: auto; }
+.marke svg { width: 34px; height: 34px; flex: none; }
+.kopf nav a { text-decoration: none; color: var(--blass); font-size: 15px; padding: 8px 6px; }
+.kopf nav a:hover { color: var(--akzent); }
+.fuss { margin-top: 48px; padding: 24px 0 40px; border-top: 1px solid var(--linie); color: var(--blass); font-size: 14px; }
+.fuss .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.fuss a { color: var(--blass); }
+
+/* Inhalt */
+main { padding-top: 28px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 12px; }
+h2 { font-size: 21px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 4px; }
+p, li { max-width: 68ch; }
+.einleitung { font-size: 19px; color: var(--blass); margin-top: 0; }
+.karte { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 14px; padding: 20px; margin-top: 16px; }
+.app { display: flex; gap: 16px; align-items: flex-start; text-decoration: none; color: inherit; }
+.app:hover { border-color: var(--akzent); }
+.app svg { width: 64px; height: 64px; flex: none; border-radius: 15px; }
+.app h2 { margin: 0 0 4px; font-size: 20px; }
+.app p { margin: 0; color: var(--blass); }
+.marke-klein { display: inline-block; font-size: 13px; font-weight: 600; color: var(--akzent); background: var(--akzent-hell); border-radius: 10px; padding: 1px 9px; margin-left: 6px; vertical-align: middle; }
+.liste-haken { padding-left: 0; list-style: none; }
+.liste-haken li { padding-left: 28px; position: relative; margin: 6px 0; }
+.liste-haken li::before { content: "✓"; position: absolute; left: 4px; color: var(--gruen); font-weight: 700; }
+.stand { color: var(--blass); font-size: 14px; }
+address { font-style: normal; }
